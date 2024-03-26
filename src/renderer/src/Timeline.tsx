@@ -5,6 +5,10 @@ const Container = styled('div')({
   position: 'relative',
 });
 
+const Time = styled('div')({
+
+});
+
 const TimelineDiv = styled('div')({
   width: '100%',
   height: '50px',
@@ -49,6 +53,7 @@ const Timeline: React.FC<Props> = (props) => {
 
   return (
     <Container>
+      <Time>{props.currentTime}</Time>
       <TimelineDiv ref={timelineRef} />
       <TimeIndicator x={currentTimeX} />
     </Container>
